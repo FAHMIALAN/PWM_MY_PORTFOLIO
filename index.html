@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" href="assets/icons/icon-128x128.png" />
+    <link rel="icon" href="assets/icons/icon-192x192.png" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -470,6 +470,19 @@
       </nav>
       <p>Copyright &#169; 2025 FAHMIAL. All Rights Reserved.</p>
     </footer>
+
+    <!-- Load JavaScript utama -->
     <script src="script.js"></script>
+
+    <!-- Register Service Worker dari root -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js') 
+            .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+            .catch(err => console.error('❌ SW registration failed:', err));
+        });
+      }
+    </script>
   </body>
 </html>

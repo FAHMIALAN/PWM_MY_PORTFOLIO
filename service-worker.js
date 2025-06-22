@@ -1,4 +1,5 @@
 const cacheName = "portfolio-cache-v1";
+
 const assets = [
   "./",
   "./index.html",
@@ -6,27 +7,72 @@ const assets = [
   "./mediaqueries.css",
   "./script.js",
   "./manifest.json",
+  // Ikon
   "./assets/icons/icon-192x192.png",
   "./assets/icons/icon-512x512.png",
-  // tambahkan semua gambar dari portofolio (profile-pic, arrow, dll)
+  "./assets/icons/icon-128x128.png",
+  // Screenshot (jika dipakai)
+  "./assets/screenshots/screenshot-desktop.png",
+  "./assets/screenshots/screenshot-mobile.png",
+  // Gambar profil & UI
+  "./assets/profile-pic.png",
+  "./assets/about-pic.png",
+  "./assets/arrow.png",
+  "./assets/linkedin.png",
+  "./assets/github.png",
+  "./assets/email.png",
+  "./assets/education.png",
+  "./assets/experience.png",
+  "./assets/instagram.png",
+  "./assets/telp.png",
+  // Logo skill (frontend & backend)
+  "./assets/html.png",
+  "./assets/css.png",
+  "./assets/java.png",
+  "./assets/javascript.png",
+  "./assets/php.png",
+  "./assets/kotlin.png",
+  "./assets/dart.png",
+  "./assets/python.png",
+  "./assets/bootstrap.png",
+  "./assets/codeigniter.png",
+  "./assets/laravel.png",
+  "./assets/nodejs.png",
+  "./assets/flutter.png",
+  "./assets/socket-io.png",
+  // Gambar project
+  "./assets/mlayusports.png",
+  "./assets/ecommerce.png",
+  "./assets/livetracking.png",
+  "./assets/madangseek.jpg",
+  "./assets/showroom.png",
+  "./assets/rmbebek.png"
 ];
 
-self.addEventListener("install", e => {
-  e.waitUntil(
-    caches.open(cacheName).then(cache => cache.addAll(assets))
+// Instalasi cache
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(cacheName).then(cache => {
+      console.log("✅ Caching all assets");
+      return cache.addAll(assets);
+    })
   );
 });
 
-self.addEventListener("activate", e => {
-  e.waitUntil(
+// Aktivasi service worker
+self.addEventListener("activate", event => {
+  event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== cacheName).map(k => caches.delete(k)))
+      Promise.all(
+        keys.filter(key => key !== cacheName).map(key => caches.delete(key))
+      )
     )
   );
 });
 
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request).then(res => res || fetch(e.request))
+// Fetch offline fallback
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    caches.match(event.request).then(response => response || fetch(event.request))
   );
 });

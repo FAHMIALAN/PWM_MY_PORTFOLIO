@@ -1,20 +1,38 @@
 {
   "name": "Fahmi Al-Anshori Portfolio",
   "short_name": "FahmiDev",
-  "start_url": "./index.html",
+  "description": "Personal portfolio website of Fahmi Al-Anshori - Full-Stack Developer.",
+  "start_url": "/index.html",
+  "id": "/index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "orientation": "portrait",
   "theme_color": "#000000",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "assets/icons/icon-192x192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
       "src": "assets/icons/icon-512x512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/screenshot-desktop.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "assets/screenshots/screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "640x1136"
     }
   ]
 }
