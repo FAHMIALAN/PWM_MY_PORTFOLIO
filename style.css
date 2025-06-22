@@ -136,6 +136,7 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
+  
 }
 
 .hamburger-icon span:first-child {
@@ -145,6 +146,21 @@ a:hover {
 .hamburger-icon span:first-child {
   transform: none;
 }
+
+#installBtn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+#installBtn:hover {
+  background: #333;
+  cursor: pointer;
+}
+
 
 /* SECTIONS */
 
@@ -404,7 +420,7 @@ article .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 1rem;
 }
 

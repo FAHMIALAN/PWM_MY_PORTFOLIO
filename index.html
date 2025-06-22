@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" href="assets/icons/icon-128x128.png" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -47,12 +50,14 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/CV-FAHMI AL-ANSHORI.pdf')"
-          >
+            onclick="window.open('./assets/CV-FAHMI AL-ANSHORI.pdf')">
             Download CV
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
+          </button>
+          <button id="installBtn" class="btn" style="display: none; position: fixed; bottom: 1rem; right: 1rem; z-index: 1000;">
+          Install App
           </button>
         </div>
         <div id="socials-container">
@@ -364,7 +369,7 @@
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/FAHMIALAN/madangseekkk.git'"
-                />
+                >
                 Github
               </button>
             </div>
@@ -433,10 +438,19 @@
           />
           <p><a href="https://www.linkedin.com/in/fahmialnshr/">LinkedIn</a></p>
         </div>
+        
+        <div class="contact-info-container">
+          <img
+            src="./assets/instagram.png"
+            alt="Instagram icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.instagram.com/alan.aja_?igsh=MTcwMDM4aDdoZGhhZA==">Instagram</a></p>
+        </div>
         <div class="contact-info-container">
           <img
             src="./assets/telp.png"
-            alt="LinkedIn icon"
+            alt="Telp icon"
             class="icon contact-icon"
           />
           <p><a>0877-6065-1757</a></p>
