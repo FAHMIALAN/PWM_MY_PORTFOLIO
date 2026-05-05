@@ -10,8 +10,7 @@ const assets = [ // Daftar semua file yang akan disimpan (di-cache)
   // Ikon aplikasi
   "./assets/icons/icon-192x192.png",
   "./assets/icons/icon-512x512.png",
-  "./assets/icons/icon-128x128.png",
-  // Screenshot halaman (jika digunakan di manifest atau preview)
+  // Screenshot halaman
   "./assets/screenshots/screenshot-desktop.png",
   "./assets/screenshots/screenshot-mobile.png",
   // Gambar profil dan tampilan
@@ -25,7 +24,7 @@ const assets = [ // Daftar semua file yang akan disimpan (di-cache)
   "./assets/experience.png",
   "./assets/instagram.png",
   "./assets/telp.png",
-  // Ikon skill (frontend/backend)
+  // Ikon skill (frontend/backend/tools)
   "./assets/html.png",
   "./assets/css.png",
   "./assets/java.png",
@@ -40,13 +39,21 @@ const assets = [ // Daftar semua file yang akan disimpan (di-cache)
   "./assets/nodejs.png",
   "./assets/flutter.png",
   "./assets/socket-io.png",
+  "./assets/React.png",
+  "./assets/Vue.png",
+  "./assets/Tailwind.png",
   // Gambar project
   "./assets/mlayusports.png",
   "./assets/ecommerce.png",
   "./assets/livetracking.png",
+  "./assets/ngemong.png",
+  "./assets/coffeshop.png",
+  "./assets/qrdine.png",
   "./assets/madangseek.jpg",
   "./assets/showroom.png",
-  "./assets/rmbebek.png"
+  "./assets/rmbebek.png",
+  // Dokumen
+  "./assets/CV_Lamaran_Kerja_Fahmi_BE.pdf"
 ];
 
 // ✅ Instalasi cache saat pertama kali service worker didaftarkan
