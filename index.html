@@ -567,15 +567,5 @@
     <!-- Load JavaScript utama -->
     <script src="script.js"></script>
 
-    <!-- Register Service Worker dari root -->
-    <script>
-      if ('serviceWorker' in navigator) { // Cek apakah browser mendukung service worker
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js') // Mendaftarkan file service worker
-            .then(reg => console.log('✅ Service Worker registered:', reg.scope)) // \\ Jika sukses, tampilkan pesan berhasil
-            .catch(err => console.error('❌ SW registration failed:', err)); // Jika gagal, tampilkan error
-        });
-      }
-    </script>
   </body>
 </html>
