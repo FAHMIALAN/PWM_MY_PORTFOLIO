@@ -1,4 +1,4 @@
-const cacheName = "portfolio-cache-v1"; // Nama cache versi saat ini
+const cacheName = "portfolio-cache-v2"; // Nama cache versi saat ini
 
 const assets = [ // Daftar semua file yang akan disimpan (di-cache)
   "./",
